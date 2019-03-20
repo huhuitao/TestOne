@@ -14,7 +14,7 @@ function RouterConfig({ history, app }) {
         <MainLayout>
           <Switch>
             <Route exact path="/" component={toDynamic(() => import('./routes/index-page'))} />
-            <Route path="/record" component={toDynamic(() => import('./routes/record'))} />
+            <Route path="/record" component={toDynamic(() => import('./routes/record'), ['record'])} />
             <Route path="/deploy/productDeploy" component={toDynamic(() => import('./routes/deploy/productDeploy'), ['deploy/productDeploy'])} />
             <Route path="/deploy/hotelDeploy" component={toDynamic(() => import('./routes/deploy/hotelDeploy'), ['deploy/hotelDeploy'])} />
             <Route path="/deploy/subscribeDeclare" component={toDynamic(() => import('./routes/deploy/subscribeDeclare'))} />

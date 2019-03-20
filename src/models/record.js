@@ -1,9 +1,8 @@
-import { getRecordList } from '../services/record';
+import { getRecordList } from '@services/record';
 
 const DeviceModal = {
   namespace: 'record',
   state: {
-    data: [],
   },
   subscriptions: {
     setup({ dispatch, history }) {
@@ -13,6 +12,10 @@ const DeviceModal = {
 
   effects: {
     *query(payload, { call, put, select }) {
+      const res = yield call(getRecordList, { ...payload });
+      yield put({ type: 'save', payload: { data: res.data } });
+    },
+    *onChange(payload, { call, put, select }) {
       const res = yield call(getRecordList, { ...payload });
       yield put({ type: 'save', payload: { data: res.data } });
     },

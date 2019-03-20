@@ -59,12 +59,9 @@ const columns = [{
 @connect(mapStateToProps)
 @Form.create()
 export default class Record extends Component {
-  state={
-    value: 1,
-  }
   onChange=(e) => {
-    this.setState({
-      value: e.target.value });
+    const { dispatch } = this.props;
+    dispatch({ type: 'record/onChange', payload: e.target.value });
   }
   render() {
     const { data } = this.props.record;
@@ -83,21 +80,7 @@ export default class Record extends Component {
           <Badge count={1} ><RadioButton value={3}>全部</RadioButton></Badge>
         </RadioGroup>
         <div>
-          {
-            this.state.value === 1 && (
               <Table columns={columns} dataSource={data} bordered />
-            )
-          }
-          {
-            this.state.value === 2 && (
-              <Table columns={columns} bordered />
-            )
-          }
-          {
-            this.state.value === 3 && (
-              <Table columns={columns} bordered />
-            )
-          }
         </div>
       </div>
     );
