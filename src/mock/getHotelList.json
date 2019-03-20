@@ -1,0 +1,16 @@
+{
+  "ret":true,
+  "msg": "",
+  "code":"0",
+  "data":[{
+    "key":"1",
+    "id":"11",
+    "hotelName":"福州世贸洲际酒店",
+    "time":"１月１日－２月１日",
+    "account":"自助餐",
+    "info":"xxxxxxx.jpg",
+    "turnoverTime":"2018-11-11 1:00",
+    "admin":"admin"
+  }],
+  "errorData":""
+}

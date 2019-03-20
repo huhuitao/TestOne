@@ -1,0 +1,23 @@
+{
+  "ret":true,
+  "msg": "",
+  "code":"0",
+  "data":[{
+    "key":"1",
+    "id":"11",
+    "hotelName":"通兑券1888元",
+    "supportHotel":"福州世贸洲际酒店     上海世贸洲际酒店",
+    "turnoverTime":"2018-11-11 1:00",
+    "admin":"admin"
+  },{
+    "key":"2",
+    "id":"",
+    "hotelName":"",
+    "time":"",
+    "declare":"",
+    "info":"",
+    "turnoverTime":"",
+    "admin":""
+  }],
+  "errorCode":""
+}
